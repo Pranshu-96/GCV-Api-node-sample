@@ -27,6 +27,13 @@ async function quickstart() {
   const labels = result.labelAnnotations;
   console.log('Labels:');
   labels.forEach(label => console.log(label.description));
+  
+  // Performs logo detection on the image file
+  const [result1] = await client.logoDetection('./resources/wakeupcat.jpg');
+  const logos = result1.logoAnnotations;
+  console.log('Logos:');
+  logos.forEach(logo => console.log(logo));
+  
 }
 // [END vision_quickstart]
 
