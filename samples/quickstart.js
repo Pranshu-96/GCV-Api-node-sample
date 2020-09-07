@@ -29,7 +29,7 @@ async function quickstart() {
   labels.forEach(label => console.log(label.description));
   
   // Performs logo detection on the image file
-  const [result1] = await client.logoDetection('./resources/wakeupcat.jpg');
+  const [result1] = await client.logoDetection('./resources/logos.png');
   const logos = result1.logoAnnotations;
   console.log('Logos:');
   logos.forEach(logo => console.log(logo));
