@@ -44,8 +44,10 @@ faces.forEach((face, i) => {
   console.log(`    Anger: ${face.angerLikelihood}`);
   console.log(`    Sorrow: ${face.sorrowLikelihood}`);
   console.log(`    Surprise: ${face.surpriseLikelihood}`);
+}
   
 }
-// [END vision_quickstart]
+ 
+              // [END vision_quickstart]
 
 quickstart().catch(console.error);
