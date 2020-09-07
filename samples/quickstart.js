@@ -34,6 +34,17 @@ async function quickstart() {
   console.log('Logos:');
   logos.forEach(logo => console.log(logo));
   
+  // Perform face detection
+  const [result2] = await client.faceDetection('./resources/face.png');
+const faces = result2.faceAnnotations;
+console.log('Faces:');
+faces.forEach((face, i) => {
+  console.log(`  Face #${i + 1}:`);
+  console.log(`    Joy: ${face.joyLikelihood}`);
+  console.log(`    Anger: ${face.angerLikelihood}`);
+  console.log(`    Sorrow: ${face.sorrowLikelihood}`);
+  console.log(`    Surprise: ${face.surpriseLikelihood}`);
+  
 }
 // [END vision_quickstart]
 
