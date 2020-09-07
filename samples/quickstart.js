@@ -44,7 +44,7 @@ faces.forEach((face, i) => {
   console.log(`    Anger: ${face.angerLikelihood}`);
   console.log(`    Sorrow: ${face.sorrowLikelihood}`);
   console.log(`    Surprise: ${face.surpriseLikelihood}`);
-}
+});
   
 }
  
