@@ -23,13 +23,13 @@ async function quickstart() {
   const client = new vision.ImageAnnotatorClient();
 
   // Performs label detection on the image file
-  const [result] = await client.labelDetection('./resources/wakeupcat.jpg');
+  const [result] = await client.labelDetection('./resources/face.jpg');
   const labels = result.labelAnnotations;
   console.log('Labels:');
   labels.forEach(label => console.log(label.description));
   
   // Performs logo detection on the image file
-  const [result1] = await client.logoDetection('./resources/logos.png');
+  const [result1] = await client.logoDetection('./resources/face.png');
   const logos = result1.logoAnnotations;
   console.log('Logos:');
   logos.forEach(logo => console.log(logo));
