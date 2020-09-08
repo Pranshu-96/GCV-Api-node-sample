@@ -23,7 +23,8 @@ async function quickstart() {
   const client = new vision.ImageAnnotatorClient();
 
   // Performs label detection on the image file
-  const [result] = await client.labelDetection('./resources/wakeupcat.jpg');
+  const [result] = await client.labelDetection('https://www.google.com/search?q=cat&rlz=1C1CHBF_enIN850IN850&sxsrf=ALeKk00hsbaLli34_F8GvAVn0rA-EqXZYA:1599531558188&source=lnms&tbm=isch&sa=X&ved=2ahUKEwijt9Syv9jrAhUZ7XMBHTPvBzMQ_AUoAXoECB0QAw&biw=1536&bih=722#imgrc=XWXc4QpQ2bVTYM
+');
   const labels = result.labelAnnotations;
   console.log('Labels:');
   labels.forEach(label => console.log(label.description));
